@@ -9,8 +9,8 @@ e.g.:
 
 ```
 [imapserver.hostname.com]
-username: "imap username"
-mail_from: "email address"
+username: imap username
+mail_from: email address
 ```
 
 Then invoke ./mapplenotes.py imapserver.hostname.com
