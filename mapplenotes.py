@@ -177,7 +177,6 @@ class NoteManager(cmd.Cmd):
         note_list = self._get_notes()
         for noteid,note in note_list:
             if int(noteid) == nid:
-                print "found it"
                 raw_body = get_first_text_block(note)
                 body = html_to_text(raw_body)
                 fd = NamedTemporaryFile()
@@ -204,7 +203,6 @@ class NoteManager(cmd.Cmd):
 
         ids = self._get_ids()
 
-        #print "%s\n%s" % (line, note_contents)
         new_message = email.message.Message()
         new_message['Subject'] = line
         new_message['From'] = self._mail_from
