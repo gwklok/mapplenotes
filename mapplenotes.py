@@ -46,16 +46,6 @@ def get_first_text_block(email_message_instance):
     elif maintype == 'text':
         return email_message_instance.get_payload()
 
-def compare_message_tuple(x, y):
-    if 'date' in x[1] and 'date' in y[1]:
-        at = dateutil.parser.parse(x[1]['Date'])
-        bt = dateutil.parser.parse(y[1]['Date'])
-        return at < bt
-    elif 'date' in x[1]:
-        return 1
-    elif 'date' in y[1]:
-        return -1
-
 def edit_note(filehandle):
     foo = ""
     editor = os.getenv('EDITOR', 'vim')
